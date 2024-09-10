@@ -1,4 +1,4 @@
-package Table_NV;
+	package Table_NV;
 
 import java.util.Objects;
 
@@ -62,7 +62,7 @@ public class ThongTinNV {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(ho, luong, maNV, phai, ten, tuoi);
+		return Objects.hash(maNV);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -73,14 +73,14 @@ public class ThongTinNV {
 		if (getClass() != obj.getClass())
 			return false;
 		ThongTinNV other = (ThongTinNV) obj;
-		return Objects.equals(ho, other.ho) && Double.doubleToLongBits(luong) == Double.doubleToLongBits(other.luong)
-				&& Objects.equals(maNV, other.maNV) && phai == other.phai && Objects.equals(ten, other.ten)
-				&& tuoi == other.tuoi;
+		return Objects.equals(maNV, other.maNV);
 	}
 	@Override
 	public String toString() {
-		return "ThongTinNV [maNV=" + maNV + ", ho=" + ho + ", ten=" + ten + ", tuoi=" + tuoi + ", phai=" + phai
-				+ ", luong=" + luong + "]";
+		return "ThongTinNV "
+				+ "\n Mã Nhân Viên: " + maNV + "\n Họ: " + ho 
+				+ "\n Tên: " + ten + "\n Tuoi" + tuoi + "\n Phái: " + (phai ? "Nữ": "Nam")
+				+ "\n Luong: " + luong;
 	}
 	
 	
